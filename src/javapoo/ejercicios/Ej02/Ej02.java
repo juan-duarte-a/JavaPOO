@@ -1,4 +1,4 @@
-package javapoo.Ej02;
+package javapoo.ejercicios.Ej02;
 
 import java.util.Scanner;
 

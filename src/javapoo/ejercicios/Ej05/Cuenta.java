@@ -1,4 +1,4 @@
-package javapoo.Ej05;
+package javapoo.ejercicios.Ej05;
 
 public class Cuenta {
     
@@ -47,7 +47,7 @@ public class Cuenta {
     public String consultarDatos() {
         return "Número de cuenta: " + numeroCuenta
                 + "%nDNI: " + DNI
-                + "%nSaldo: " + saldo
+                + "%nSaldo: " + String.format("$%,.2f", saldo)
                 + "%n";
     }
     

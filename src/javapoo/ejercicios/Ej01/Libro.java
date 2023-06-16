@@ -1,4 +1,4 @@
-package javapoo.Ej01;
+package javapoo.ejercicios.Ej01;
 
 public class Libro {
     private String ISBN;
