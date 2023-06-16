@@ -57,18 +57,25 @@ public class Persona {
         this.sexo = sexo;
     }
     
+    /**
+    * Calcula si la persona está en su peso ideal de acuerdo 
+    * al Índice de Masa Corporal.
+    * 
+    * @return <code>-1</code> si la persona está por debajo de su peso ideal.
+    *          <code>0</code> si la persona está en su peso ideal.
+    *          <code>1</code> si la persona está por encima de su peso ideal.
+    */
     public int calcularIMC() {
         double imc = peso / (altura * altura);
-        
-        if (imc < 20)
-            return -1;
-        else if (imc <= 25)
-            return 0;
-        else
-            return 1;
+        return imc < 20 ? -1 : imc <= 25 ? 0 : 1;
     }
     
     public boolean esMayorDeEdad() {
         return edad >= 18;
+    }
+    
+    @Override
+    public String toString() {
+        return nombre + ", " + edad + ", " + sexo.toString().toLowerCase() + ".";
     }
 }
