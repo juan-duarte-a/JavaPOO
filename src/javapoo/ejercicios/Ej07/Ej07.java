@@ -18,7 +18,7 @@ public class Ej07 {
         personas.add(new Persona("Arturo", 37, 91, 1.68, Persona.Sexo.HOMBRE));
 
         personas.stream().forEach(persona -> {
-            System.out.println(persona.toString());
+            System.out.println(persona);
             System.out.println("¿Es mayor de edad? " + (persona.esMayorDeEdad() ? "Sí." : "No."));
             System.out.println("Índice de masa corporal: "
                     + (persona.calcularIMC() == -1 ? "peso por debajo de lo ideal."
