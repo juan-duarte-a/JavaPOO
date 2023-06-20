@@ -107,4 +107,14 @@ public class Ej06Test {
         assertFalse("Debería dar false.", cafetera.servirTaza(620));
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void agregarCafe3Test() {
+        cafetera.agregarCafe(-100);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void servirTaza3Test() {
+        cafetera.servirTaza(-100);
+    }
+    
 }
