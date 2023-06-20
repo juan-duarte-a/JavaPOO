@@ -38,7 +38,7 @@ public class Ej06ParameterizedTest {
     public void tearDown() {
     }
 
-    @Parameters(name = "valoresDePrueba")
+    @Parameters()
     public static Object[] valoresDePrueba() {
         return new Object[] {
             new Object[] {  0, 450},

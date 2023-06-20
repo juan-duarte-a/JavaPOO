@@ -30,14 +30,47 @@ public class Ej06Test {
 
     @Test
     public void constructor1Test() {
+        assertEquals("Capacidad máxima debería ser 800.", 800, cafetera.CAPACIDAD_MAXIMA);
+        assertEquals("Capacidad actual debería ser 450.", 450, cafetera.getCantidadActual());
+    }
+    
+    @Test
+    public void constructor2ATest() {
         cafetera = new Cafetera(750);
         assertEquals("Capacidad máxima debería ser 750.", 750, cafetera.CAPACIDAD_MAXIMA);
     }
     
     @Test
-    public void constructor2Test() {
-        assertEquals("Capacidad máxima debería ser 800.", 800, cafetera.CAPACIDAD_MAXIMA);
-        assertEquals("Capacidad actual debería ser 450.", 450, cafetera.getCantidadActual());
+    public void constructor2BTest() {
+        Exception e = assertThrows("Debe lanzar IllegalArgumentException.", IllegalArgumentException.class,
+                () -> cafetera = new Cafetera(-750));
+        assertEquals("El mensaje de la excepción debería ser: La capacidad máxima debe ser igual o mayor a cero.",
+                "La capacidad máxima debe ser igual o mayor a cero.", e.getMessage());
+    }
+    
+    @Test
+    public void constructor3ATest() {
+        cafetera = new Cafetera(1500, 500);
+        assertEquals("La capacidad máxima debería ser 1500.", 1500, cafetera.CAPACIDAD_MAXIMA);
+        assertEquals("La cantidad actual debería ser 500.", 500, cafetera.getCantidadActual());
+    }
+  
+    @Test
+    public void constructor3BTest() {
+        Exception e = assertThrows("Debe lanzar IllegalArgumentException.", IllegalArgumentException.class,
+                () -> cafetera = new Cafetera(-750, 500));
+        assertEquals("El mensaje de la excepción debería ser:"
+                + "La capacidad máxima debe ser igual o mayor a cero.",
+                "La capacidad máxima debe ser igual o mayor a cero.", e.getMessage());
+    }
+    
+    @Test
+    public void constructor3CTest() {
+        Exception e = assertThrows("Debe lanzar IllegalArgumentException.", IllegalArgumentException.class,
+                () -> cafetera = new Cafetera(750, 800));
+        assertEquals("El mensaje de la excepción debería ser:"
+                + "La capacidad actual no debe ser superior a la capacidad máxima.",
+                "La capacidad actual no debe ser superior a la capacidad máxima.", e.getMessage());
     }
     
     @Test

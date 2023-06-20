@@ -10,13 +10,23 @@ public class Cafetera {
         this.CAPACIDAD_MAXIMA = 1000;
     }
 
-    public Cafetera(int CAPACIDAD_MAXIMA) {
+    public Cafetera(int CAPACIDAD_MAXIMA) throws IllegalArgumentException {
+        if (CAPACIDAD_MAXIMA < 0) {
+            throw new IllegalArgumentException("La capacidad máxima debe ser igual o mayor a cero.");
+        }
+        
         this.CAPACIDAD_MAXIMA = CAPACIDAD_MAXIMA;
         this.cantidadActual = 0;
     }
 
-    public Cafetera(int CAPACIDAD_MAXIMA, int cantidadActual) {
-        this.CAPACIDAD_MAXIMA = CAPACIDAD_MAXIMA;
+    public Cafetera(int CAPACIDAD_MAXIMA, int cantidadActual) throws IllegalArgumentException {
+        this(CAPACIDAD_MAXIMA);
+        
+        if (cantidadActual > CAPACIDAD_MAXIMA) {
+            throw new IllegalArgumentException("La capacidad actual "
+                    + "no debe ser superior a la capacidad máxima.");
+        }
+        
         this.cantidadActual = cantidadActual;
     }
 
