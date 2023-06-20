@@ -46,7 +46,11 @@ public class Cafetera {
         cantidadActual = 0;
     }
     
-    public void agregarCafe(int cantidad) {
+    public void agregarCafe(int cantidad) throws IllegalArgumentException {
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad debe ser mayor o igual a cero.");
+        }
+        
         cantidadActual = Math.min(cantidadActual + cantidad, CAPACIDAD_MAXIMA);
     }
     
@@ -58,7 +62,11 @@ public class Cafetera {
      * @return <code>true</code> si la cantidad de café contenida en la cafetera es suficiente.
      *         <code>false</code> de lo contrario.
      */
-    public boolean servirTaza(int cantidad) {
+    public boolean servirTaza(int cantidad) throws IllegalArgumentException {
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad debe ser mayor o igual a cero.");
+        }
+        
         boolean cantidadSuficiente = cantidad < cantidadActual;
         cantidadActual = Math.max(0, cantidadActual - cantidad);
         
