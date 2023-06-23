@@ -1,23 +1,23 @@
-package javapoo.ActividadExtra1.Ej2;
+package javapoo.actividadextra1.Ej2;
 
-public class Cuadrado implements Figura {
+public class Pentagono implements Figura {
     
     private final double lado;
 
-    public Cuadrado(double lado) {
+    public Pentagono(double lado) {
         this.lado = lado;
     }
-    
+
     @Override
     public double calcularPerimetro() {
-        return lado * 4;
+        return lado * 5;
     }
     
     @Override
     public double calcularArea() {
-        return lado * lado;
+        return Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * lado / 4;
     }
-
+    
     public double getLado() {
         return lado;
     }

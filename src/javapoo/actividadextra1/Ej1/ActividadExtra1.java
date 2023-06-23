@@ -1,6 +1,6 @@
-package javapoo.ActividadExtra1.Ej1;
+package javapoo.actividadextra1.Ej1;
 
-import static javapoo.ActividadExtra1.Ej1.Vehiculo.Tipo.*;
+import static javapoo.actividadextra1.Ej1.Vehiculo.Tipo.*;
 import java.util.ArrayList;
 import java.util.List;
 

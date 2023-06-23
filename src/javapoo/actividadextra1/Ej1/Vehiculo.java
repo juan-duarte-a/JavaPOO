@@ -1,4 +1,4 @@
-package javapoo.ActividadExtra1.Ej1;
+package javapoo.actividadextra1.Ej1;
 
 public class Vehiculo {
     

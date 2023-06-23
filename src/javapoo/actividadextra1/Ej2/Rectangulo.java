@@ -1,4 +1,4 @@
-package javapoo.ActividadExtra1.Ej2;
+package javapoo.actividadextra1.Ej2;
 
 public class Rectangulo implements Figura {
 
