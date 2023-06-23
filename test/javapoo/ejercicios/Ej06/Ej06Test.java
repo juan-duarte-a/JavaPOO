@@ -97,6 +97,11 @@ public class Ej06Test {
         assertEquals("La cantidad actual debería ser 800.", 800, cafetera.getCantidadActual());
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void agregarCafe3Test() {
+        cafetera.agregarCafe(-100);
+    }
+    
     @Test
     public void servirTaza1Test() {
         assertTrue("Debería dar true.", cafetera.servirTaza(220));
@@ -105,11 +110,6 @@ public class Ej06Test {
     @Test
     public void servirTaza2Test() {
         assertFalse("Debería dar false.", cafetera.servirTaza(620));
-    }
-    
-    @Test(expected = IllegalArgumentException.class)
-    public void agregarCafe3Test() {
-        cafetera.agregarCafe(-100);
     }
     
     @Test(expected = IllegalArgumentException.class)
