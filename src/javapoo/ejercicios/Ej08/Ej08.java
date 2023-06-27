@@ -14,4 +14,5 @@ public class Ej08 {
         System.out.println("Reemplazar 'o' por '-': " + cadena.reemplazar("o", "-"));
         System.out.println("Contiene '.': " + cadena.contiene("."));
     }
+    
 }
