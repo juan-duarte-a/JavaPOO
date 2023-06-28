@@ -32,6 +32,7 @@ public class Ej14 {
     public static void ingresarCodigo(Movil movil) {
         System.out.println("Ingresar código:");
         String codigo = sc.next();
+        if (codigo.length() > 7) codigo = codigo.substring(0, 7);
         movil.setCodigo(Stream.of(codigo).mapToInt(c -> Integer.valueOf(c)).toArray());
     }
     
