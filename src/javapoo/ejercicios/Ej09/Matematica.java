@@ -1,7 +1,8 @@
 package javapoo.ejercicios.Ej09;
 
 public class Matematica {
-        private double numero1;
+    
+    private double numero1;
     private double numero2;
 
     public Matematica() { }
