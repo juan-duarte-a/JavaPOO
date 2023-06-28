@@ -20,12 +20,12 @@ public class Ej05 {
         
         do {
             System.out.println("Adivina el mes secreto:");
-            mes = sc.next();
+            mes = sc.nextLine();
             
             if (mes.equals(mesSecreto)) {
                 System.out.println("¡Has adivinado!");
                 break;
-            } else {
+            } else if (!mes.equals("")){
                 System.out.println("Intenta nuevamente.");
             }
         } while (!mes.equals(""));
