@@ -22,7 +22,7 @@ public class Ej05 {
             System.out.println("Adivina el mes secreto:");
             mes = sc.nextLine();
             
-            if (mes.equals(mesSecreto)) {
+            if (mes.equalsIgnoreCase(mesSecreto)) {
                 System.out.println("¡Has adivinado!");
                 break;
             } else if (!mes.equals("")){
