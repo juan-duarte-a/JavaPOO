@@ -60,11 +60,11 @@ public class Movil {
         this.almacenamiento = almacenamiento;
     }
 
-    public int [] getCodigo() {
+    public int[] getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int [] codigo) {
+    public void setCodigo(int[] codigo) {
         this.codigo = codigo;
     }
     

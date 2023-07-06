@@ -58,7 +58,8 @@ public class Pelicula {
     
     @Override
     public String toString() {
-        return titulo + ". " + año + ". " + genero + ". Duración: " + duracion + " minutos.";
+        return titulo + ". " + año + ". " + genero + ". Duración: " + duracion + " minutos." 
+                + (alquilada ? " Alquilada." : " Disponible.");
     }
 
 }
