@@ -43,7 +43,6 @@ public void agregarCliente(Cliente cliente) {
             int id, String nombre, int edad, int altura, double peso, String objetivo) {
         
         Cliente cliente = buscarCliente(id);
-        cliente.setId(id);
         cliente.setNombre(nombre);
         cliente.setEdad(edad);
         cliente.setAltura(altura);

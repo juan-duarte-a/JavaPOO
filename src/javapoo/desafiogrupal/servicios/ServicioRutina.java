@@ -49,7 +49,6 @@ public class ServicioRutina {
             int id, String nombre, int duracion, NivelDificultad dificultad, String descripcion) {
         
         Rutina rutina = buscarRutina(id);
-        rutina.setId(id);
         rutina.setNombre(nombre);
         rutina.setDuracion(duracion);
         rutina.setDificultad(dificultad);
